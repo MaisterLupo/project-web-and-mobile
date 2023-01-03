@@ -1,5 +1,6 @@
 body{
   font-family: Universe, Geneva, sans-serif;
+  background-color: #CED6DC;
 }
 
 /** HEADER **/
@@ -153,6 +154,9 @@ body{
 
 /*HOME PAGE*/
 /*--- gif and video START*/
+#main_content {
+  background-color: #EAECEC;
+}
 .container .jumbotron > a#youtube {
   position: absolute;
   z-index: 1;
@@ -171,66 +175,89 @@ body{
   border: 2px solid #6B83BB;
   position: relative;
 }
-.imtip {
+.imtip img {
   position: absolute;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  bottom: 0%;
+  right: 48.5%;
   bottom: 0;
   width: 4%;
 }
 /*--- gif and video END*/
 
 /*--- grid view START*/
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 400px 400px;
-  background-color: #4863A0;
-  width: 100vw;
-  height: 100vh;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0px solid rgba(0, 0, 0, 0.8);
-  padding: 0px;
-  font-size: 30px;
-  text-align: center;
+#telemedicine_tile, #ai_tile, #qc_tile, #applications_tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 0px;
   position: relative;
   overflow: hidden;
-}
-.grid-item > img {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
+  background-position: fill;
   transition: transform .7s ease;
 }
-.grid-item > a {
-  position: absolute;
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-  color:white;
-  text-align: center;
-  font-size: 30px;
-  word-wrap: break-word;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.grid-item > img:hover {
+#telemedicine_tile:hover, #ai_tile:hover, #qc_tile:hover, #applications_tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
   transform: scale(1.1);
+}
+#telemedicine_tile {
+  background: url('../images/telemedicine_tile_385.jpeg') no-repeat;
+  background-position: fill;
+}
+#ai_tile {
+  background: url('../images/ai_tile_385.jpg') no-repeat;
+  background-position: fill;
+}
+#qc_tile {
+  background: url('../images/qc_tile_385.jpeg') no-repeat;
+  background-position: fill;
+}
+#applications_tile {
+  background: url('../images/applications_tile_385.jpeg') no-repeat;
+  background-position: fill;
+}
+#telemedicine_tile span, #ai_tile span, #qc_tile span, #applications_tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
 }
 /*--- grid view END*/
 
 /*END HOME PAGE*/
 
+.col-lg-6, .col-md-6, .col-sm-6, .col-xs-6 {
+  padding-right: 0px;
+  padding-left: 0px;
+  overflow: hidden;
+}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
     background: url('../images/jumbotron_1200.gif') no-repeat;
     height: 675px;
+  }
+  #telemedicine_tile {
+    background: url('../images/telemedicine_tile_585.jpeg') no-repeat;
+    background-position: fill;
+  }
+  #ai_tile {
+    background: url('../images/ai_tile_585.jpg') no-repeat;
+    background-position: center;
+  }
+  #qc_tile {
+    background: url('../images/qc_tile_585.jpeg') no-repeat;
+    background-position: center;
+  }
+  #applications_tile {
+    background: url('../images/applications_tile_585.jpeg') no-repeat;
+    background-position: fill;
   }
 }
 
@@ -250,6 +277,22 @@ body{
     background: url('../images/jumbotron_992.gif') no-repeat;
     height: 558px;
   }
+  #telemedicine_tile {
+    background: url('../images/telemedicine_tile_485.jpeg') no-repeat;
+    background-position: fill;
+  }
+  #ai_tile {
+    background: url('../images/ai_tile_485.jpg') no-repeat;
+    background-position: center;
+  }
+  #qc_tile {
+    background: url('../images/qc_tile_485.jpeg') no-repeat;
+    background-position: center;
+  }
+  #applications_tile {
+    background: url('../images/applications_tile_485.jpeg') no-repeat;
+    background-position: fill;
+  }
   /* End Home Page */
 }
 
@@ -259,6 +302,22 @@ body{
   .container .jumbotron {
     background: url('../images/jumbotron_768.gif') no-repeat;
     height: 432px;
+  }
+  #telemedicine_tile {
+    background: url('../images/telemedicine_tile_385.jpeg') no-repeat;
+    background-position: fill;
+  }
+  #ai_tile {
+    background: url('../images/ai_tile_385.jpg') no-repeat;
+    background-position: fill;
+  }
+  #qc_tile {
+    background: url('../images/qc_tile_385.jpeg') no-repeat;
+    background-position: fill;
+  }
+  #applications_tile {
+    background: url('../images/applications_tile_385.jpeg') no-repeat;
+    background-position: fill;
   }
   /* End Home Page */
 }
@@ -303,10 +362,10 @@ body{
     margin-top: 30px;
     padding: 0;
   }
-  #menu-tile, #specials-tile {
+  /*#telemedicine_tile, #ai_tile, #qc_tile, #applications_tile {
     width: 360px;
     margin: 0 auto 15px;
-  }
+  }*/
 
   .menu-item-photo {
     margin-right: auto;
