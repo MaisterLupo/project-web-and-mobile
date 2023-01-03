@@ -9,10 +9,10 @@ body{
   border: 0;
 }
 #logo-img {
-  background: url('../images/health.png') no-repeat;
+  background: url('../images/logo_header.png') no-repeat;
   width: 140px;
   height: 110px;
-  margin: -30px 0 10px 0;
+  margin: -8px 0 10px 0;
 }
 #nav-list {
   margin-top: 20px;
