@@ -1,8 +1,8 @@
 body{
   font-family: Universe, Geneva, sans-serif;
   background-color: #CED6DC;
+  position: relative;
 }
-
 /** HEADER **/
 #header-nav {
   background-color: #4863A0;
@@ -215,7 +215,7 @@ body{
   background: url('../images/applications_tile_385.jpeg') no-repeat;
   background-position: fill;
 }
-#telemedicine_tile span, #ai_tile span, #qc_tile span, #applications_tile span {
+.home-tiles span {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -227,18 +227,25 @@ body{
   color: #fff;
   opacity: .8;
 }
-/*--- grid view END*/
-
-/*END HOME PAGE*/
-
 .col-lg-6, .col-md-6, .col-sm-6, .col-xs-6 {
   padding-right: 0px;
   padding-left: 0px;
   overflow: hidden;
 }
+/*--- grid view END*/
+/*END HOME PAGE*/
+
+
+/*QUANTUM PAGE START*/
+nav[data-toggle="toc"] {
+  margin-top: 30px;
+  position: static;
+}
+/*QUANTUM PAGE END*/
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+  /*  Home Page*/
   .container .jumbotron {
     background: url('../images/jumbotron_1200.gif') no-repeat;
     height: 675px;
@@ -259,13 +266,15 @@ body{
     background: url('../images/applications_tile_585.jpeg') no-repeat;
     background-position: fill;
   }
+  /*  END Home Page*/
+
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
   #logo-img {
-    margin: 25px 5px 5px 0;
+    margin: 40px 5px 5px 0;
   }
   .navbar-brand {
     margin-top: -50px;
@@ -294,10 +303,18 @@ body{
     background-position: fill;
   }
   /* End Home Page */
+
+
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  #logo-img {
+    margin: 40px 5px 5px 0;
+  }
+  .navbar-brand {
+    margin-top: -50px;
+  }
   /* Home Page */
   .container .jumbotron {
     background: url('../images/jumbotron_768.gif') no-repeat;
@@ -320,6 +337,8 @@ body{
     background-position: fill;
   }
   /* End Home Page */
+
+
 }
 
 /********** Extra small devices only **********/
@@ -376,4 +395,13 @@ body{
   .menu-item-description {
     text-align: center;;
   }
-}
+  /*  END Home Page*/
+
+  /*  QUANTUM PAGE*/
+  /* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle='toc'] {
+    position: static;
+  }
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }

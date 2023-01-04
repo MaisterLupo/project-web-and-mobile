@@ -18,20 +18,17 @@ $(function () {
   $("#navbarToggle").click(function (event) {
     $(event.target).focus();
   });
+
 });
 
 (function (global) {
   var dc = {};
 
   var homeHtml = "snippets/home-snippet.html";
-  var allCategoriesUrl =
-    "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json";
-  var categoriesTitleHtml = "snippets/categories-title-snippet.html";
-  var categoryHtml = "snippets/category-snippet.html";
-  var menuItemsUrl =
-    "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
-  var menuItemsTitleHtml = "snippets/menu-items-title.html";
-  var menuItemHtml = "snippets/menu-item.html";
+  var quantumHtml = "snippets/quantum-snippet.html";
+  var aiHtml = "snippets/categories-title-snippet.html";
+  var telemedicineHtml = "snippets/category-snippet.html";
+  var applicationsHtml = "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
 
   // Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
@@ -87,6 +84,25 @@ $(function () {
     showLoading("#main-content");
     $ajaxUtils.sendGetRequest(allCategoriesUrl, buildAndShowCategoriesHTML);
   };
+
+  // Load the menu categories view
+  dc.loadPage = function (address) {
+    showLoading("#main-content");
+    $ajaxUtils.sendGetRequest(
+      address,
+      function (responseText) {
+        document.querySelector("#main-content").innerHTML = responseText;
+        // Sticky Navbar for secondary pages
+        var navSelector = '#toc';
+        var $myNav = $(navSelector);
+        Toc.init($myNav);
+        $('body').scrollspy({
+          target: navSelector
+        });
+      },
+      false);
+  };
+
 
   // Load the menu items view
   // 'categoryShort' is a short_name for a category

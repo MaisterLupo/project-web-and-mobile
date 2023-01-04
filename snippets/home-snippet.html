@@ -6,28 +6,32 @@
       <a href="#grid" class="imtip"> <img src="images/downward-arrow.png"/></a>
     </div>
 
-    <div id="home-tiles-1" class="row">
+    <div class="row home-tiles">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <a href="#" onclick="$dc.loadMenuCategories();">
-          <div id="telemedicine_tile" class="img-responsive"><span>telemedicine</span></div>
+          <div id="telemedicine_tile" class="img-responsive"></div>
+          <span>telemedicine</span>
         </a>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <a href="#" onclick="$dc.loadMenuItems('SP');">
-          <div id="ai_tile" class="img-responsive"><span>artificial intelligence</span></div>
+          <div id="ai_tile" class="img-responsive"></div>
+          <span>artificial intelligence</span>
         </a>
       </div>
     </div> <!-- End of #home-tiles-1 -->
 
-    <div id="home-tiles-2" class="row">
+    <div class="row home-tiles">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <a href="#" onclick="$dc.loadMenuCategories();">
-          <div id="qc_tile" class="img-responsive"><span>quantum computing</span></div>
+        <a href="#" onclick="$dc.loadPage('snippets/quantum-snippet.html');">
+          <div id="qc_tile" class="img-responsive"></div>
+          <span>quantum computing</span>
         </a>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         <a href="#" onclick="$dc.loadMenuItems('SP');">
-          <div id="applications_tile" class="img-responsive"><span>applications in healthcare</span></div>
+          <div id="applications_tile" class="img-responsive"></div>
+          <span>applications in healthcare</span>
         </a>
       </div>
     </div> <!-- End of #home-tiles-2 -->
