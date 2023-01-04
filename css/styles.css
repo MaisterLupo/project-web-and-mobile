@@ -1,7 +1,8 @@
 body{
-  font-family: Universe, Geneva, sans-serif;
+/*  font-family: Universe, Geneva, sans-serif;*/
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
   background-color: #CED6DC;
-  position: relative;
+/*  position: relative;*/
 }
 /** HEADER **/
 #header-nav {
@@ -236,12 +237,54 @@ body{
 /*END HOME PAGE*/
 
 
-/*QUANTUM PAGE START*/
-nav[data-toggle="toc"] {
-  margin-top: 30px;
-  position: static;
+/*SECONDARY PAGES START*/
+#section-tiles {
+  margin-top: 20px;
 }
-/*QUANTUM PAGE END*/
+#explore {
+  margin-top: 80px;
+}
+#telemed-section-tile, #ai-section-tile, #qc-section-tile, #applications-section-tile {
+  height: 240px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 1px solid #3F0C1F;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#telemed-section-tile:hover, #ai-section-tile:hover, #qc-section-tile:hover, #applications-section-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#telemed-section-tile {
+  background: url('../images/section tiles/telemed-section-tile.jpeg') no-repeat;
+  background-position: center;
+}
+#ai-section-tile {
+  background: url('../images/section tiles/ai-section-tile.jpeg') no-repeat;
+  background-position: center;
+}
+#qc-section-tile {
+  background: url('../images/section tiles/qc-section-tile.jpeg') no-repeat;
+  background-position: center;
+}
+#applications-section-tile {
+  background: url('../images/section tiles/applications-section-tile.jpeg') no-repeat;
+  background-position: center;
+}
+#telemed-section-tile span, #ai-section-tile span, #qc-section-tile span, #applications-section-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+/*SECONDARY PAGES END*/
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
@@ -404,4 +447,9 @@ nav[data-toggle="toc"] {
   }
   nav[data-toggle='toc'] .nav .nav {
     display: block;
+  }
+
+  #telemed-section-tile, #ai-section-tile, #qc-section-tile, #applications-section-tile {
+    width: 360px;
+    margin: 0 auto 15px;
   }
