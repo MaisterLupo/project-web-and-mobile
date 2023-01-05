@@ -96,7 +96,7 @@ body{
   padding-bottom: 30px;
   background-color: #243B4A;
   border-top: 0;
-  color: white;
+  color: #cfd2d6;
 }
 .panel-footer div.row {
   margin-bottom: 35px;
@@ -110,9 +110,9 @@ body{
 #watermark > span, #address > span {
   font-size: 1.3em;
 }
-#address p {
-  color: #557c3e;
-  font-size: .8em;
+#address {
+  color: #cfd2d6;
+  font-size: 1.2em;
   line-height: 1.8;
 }
 #logo {
@@ -145,6 +145,7 @@ body{
 .footer-menu ul1 li1 a{
   color: #cfd2d6;
   text-decoration: none;
+  font-size: 1.2em;
 }
 .footer-menu ul1 li1 a:hover{
   color: #4863A0;
@@ -423,20 +424,6 @@ body{
   .container .jumbotron {
     margin-top: 30px;
     padding: 0;
-  }
-  /*#telemedicine_tile, #ai_tile, #qc_tile, #applications_tile {
-    width: 360px;
-    margin: 0 auto 15px;
-  }*/
-
-  .menu-item-photo {
-    margin-right: auto;
-  }
-  .menu-item-tile .menu-item-price {
-    text-align: center;
-  }
-  .menu-item-description {
-    text-align: center;;
   }
   /*  END Home Page*/
 
