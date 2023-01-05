@@ -239,11 +239,26 @@ body{
 
 
 /*SECONDARY PAGES START*/
+#toc {
+  border-right: 1.5px solid #4863A0;
+  border-radius: 10px;
+}
+.jumbotron-secondary {
+  margin-bottom: 70px;
+}
+.jumbotron-secondary img {
+  border-radius: 5px;
+  box-shadow: 0 0 60px #2183C4;
+}
 #section-tiles {
   margin-top: 20px;
 }
 #explore {
-  margin-top: 80px;
+  margin-top: 10px;
+}
+#hor-line {
+  margin-top: 50px;
+  border-color: black;
 }
 #telemed-section-tile, #ai-section-tile, #qc-section-tile, #applications-section-tile {
   height: 240px;
